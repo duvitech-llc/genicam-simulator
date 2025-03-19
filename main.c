@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include "gige_server.h"
 #include "gige_register_memory.h"
+#include "camera_xml.h"
 #include "network_config.h"
 #include "util.h"
 
