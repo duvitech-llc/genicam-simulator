@@ -1,5 +1,6 @@
 #include "gige_register_memory.h"
 #include "gige_commands.h"
+#include "camera_xml.h"
 #include "network_config.h"
 #include "util.h"
 #include <stdio.h>
@@ -50,7 +51,7 @@ void camera_device_init(CameraDevice *device, const char *genicam_filename)
                  SC_CAMERA_MEMORY_SIZE,
                  (unsigned int) device->genicam_xml_size);
 	}
-	
+
 	//// MAC address
 	// for (int i = 0; i < 6; i++) {
 	//     write_byte(response, global_network_config.mac_address[i]);
