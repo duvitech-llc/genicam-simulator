@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegisterDescription
+    ModelName="MyCamera"
+    VendorName="MyCompany"
+    ToolTip="Minimal GigE Vision Camera"
+    StandardNameSpace="None"
+    SchemaMajorVersion="1"
+    SchemaMinorVersion="1"
+    SchemaSubMinorVersion="0"
+    MajorVersion="1"
+    MinorVersion="0"
+    SubMinorVersion="0"
+    xmlns="http://www.genicam.org/GenApi/Version_1_1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.genicam.org/GenApi/Version_1_1 http://www.genicam.org/GenApi/GenApiSchema_Version_1_1.xsd">
+
+    <!-- Root category -->
+    <Category Name="Root">
+        <ToolTip>Root node for traversing the camera features</ToolTip>
+        <pFeature>DeviceControl</pFeature>
+		<pFeature>ImageFormatControl</pFeature>
+    </Category>
+
+    <!-- Device control -->
+    <Category Name="DeviceControl">
+        <ToolTip>Device control features</ToolTip>
+        <pFeature>DeviceVendorName</pFeature>
+        <pFeature>DeviceModelName</pFeature>
+        <pFeature>DeviceVersion</pFeature>
+        <pFeature>DeviceManufacturerInfo</pFeature>
+        <pFeature>DeviceID</pFeature>
+    </Category>
+<!-- Device control -->
+
+	<Category Name="DeviceControl" NameSpace="Standard">
+		<pFeature>DeviceVendorName</pFeature>
+		<pFeature>DeviceModelName</pFeature>
+		<pFeature>DeviceManufacturerInfo</pFeature>
+		<pFeature>DeviceID</pFeature>
+		<pFeature>DeviceVersion</pFeature>
+	</Category>
+
+	<StringReg Name="DeviceVendorName" NameSpace="Standard">
+		<DisplayName>Vendor Name</DisplayName>
+		<Address>0x48</Address>
+		<Length>32</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+	</StringReg>
+
+	<StringReg Name="DeviceModelName" NameSpace="Standard">
+		<DisplayName>Model Name</DisplayName>
+		<Address>0x68</Address>
+		<Length>32</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+	</StringReg>
+
+	<StringReg Name="DeviceManufacturerInfo" NameSpace="Standard">
+		<DisplayName>Manufacturer Info</DisplayName>
+		<Address>0xa8</Address>
+		<Length>48</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+	</StringReg>
+
+	<StringReg Name="DeviceID" NameSpace="Standard">
+		<DisplayName>Device ID</DisplayName>
+		<Address>0xd8</Address>
+		<Length>16</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+	</StringReg>
+
+	<StringReg Name="DeviceVersion" NameSpace="Standard">
+		<DisplayName>Device Version</DisplayName>
+		<Address>0x88</Address>
+		<Length>32</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+	</StringReg>
+
+
+	<!-- Image format control -->
+
+	<Category Name="ImageFormatControl" NameSpace="Standard">
+		<pFeature>SensorHeight</pFeature>
+		<pFeature>SensorWidth</pFeature>
+		<pFeature>Width</pFeature>
+		<pFeature>Height</pFeature>
+		<pFeature>PixelFormat</pFeature>
+	</Category>
+
+	<Integer Name="SensorHeight" NameSpace="Standard">
+		<Description>Full height of image sensor.</Description>
+		<pValue>SensorHeightRegister</pValue>
+	</Integer>
+
+	<IntReg Name="SensorHeightRegister" NameSpace="Custom">
+		<Address>0x118</Address>
+		<Length>4</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+		<Sign>Unsigned</Sign>
+		<Endianess>BigEndian</Endianess>
+	</IntReg>
+
+	<Integer Name="SensorWidth" NameSpace="Standard">
+		<Description>Full height of image sensor.</Description>
+		<pValue>SensorWidthRegister</pValue>
+	</Integer>
+
+	<IntReg Name="SensorWidthRegister" NameSpace="Custom">
+		<Address>0x11c</Address>
+		<Length>4</Length>
+		<AccessMode>RO</AccessMode>
+		<pPort>Device</pPort>
+		<Sign>Unsigned</Sign>
+		<Endianess>BigEndian</Endianess>
+	</IntReg>
+
+	<Integer Name="Width" NameSpace="Standard">
+		<Description>Width of image, in pixels.</Description>
+		<pValue>WidthRegister</pValue>
+		<Min>1</Min>
+		<pMax>SensorWidth</pMax>
+		<Inc>1</Inc>
+	</Integer>
+
+	<IntReg Name="WidthRegister" NameSpace="Custom">
+		<Address>0x100</Address>
+		<Length>4</Length>
+		<AccessMode>RW</AccessMode>
+		<pPort>Device</pPort>
+		<Sign>Unsigned</Sign>
+		<Endianess>BigEndian</Endianess>
+	</IntReg>
+
+	<Integer Name="Height" NameSpace="Standard">
+		<Description>Height of image, in pixels.</Description>
+		<pValue>HeightRegister</pValue>
+		<Min>1</Min>
+		<pMax>SensorHeight</pMax>
+		<Inc>1</Inc>
+	</Integer>
+
+	<IntReg Name="HeightRegister" NameSpace="Custom">
+		<Address>0x104</Address>
+		<Length>4</Length>
+		<AccessMode>RW</AccessMode>
+		<pPort>Device</pPort>
+		<Sign>Unsigned</Sign>
+		<Endianess>BigEndian</Endianess>
+	</IntReg>
+
+    <!-- Pixel format -->
+	<Enumeration Name="PixelFormat" NameSpace="Standard">
+		<DisplayName>Pixel format</DisplayName>
+		<EnumEntry Name="Mono8" NameSpace="Standard">
+			<Value>17301505</Value>
+		</EnumEntry>
+		<EnumEntry Name="Mono16" NameSpace="Standard">
+			<Value>17825799</Value>
+		</EnumEntry>
+		<pValue>PixelFormatRegister</pValue>
+    </Enumeration>
+
+	<IntReg Name="PixelFormatRegister" NameSpace="Custom">
+		<Address>0x128</Address>
+		<Length>4</Length>
+		<AccessMode>RW</AccessMode>
+		<pPort>Device</pPort>
+		<Sign>Unsigned</Sign>
+		<Endianess>BigEndian</Endianess>
+	</IntReg>
+
+
+	<!-- Port -->
+
+	<Port Name="Device" NameSpace="Standard">
+	</Port>
+
+</RegisterDescription>

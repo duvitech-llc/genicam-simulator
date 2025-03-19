@@ -1,0 +1,32 @@
+{
+    "files.associations": {
+        "*.ui": "xml",
+        "inet.h": "c",
+        "jsmn.h": "c",
+        "internet": "c",
+        "gige_register_memory.h": "c",
+        "gige_responses.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "ranges": "c",
+        "utility": "c",
+        "network_config.h": "c",
+        "algorithm": "c",
+        "stddef.h": "c",
+        "stdio.h": "c",
+        "buffer_reader.h": "c",
+        "stdlib.h": "c",
+        "unistd.h": "c",
+        "bitset": "c",
+        "__hash_table": "c",
+        "__split_buffer": "c",
+        "deque": "c",
+        "iterator": "c",
+        "queue": "c",
+        "random": "c",
+        "string": "c",
+        "unordered_map": "c",
+        "vector": "c"
+    }
+}

@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/d/starris-genicam/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(OBJ_DIR)/%.o	Makefile	/^$(OBJ_DIR)\/%.o: $(SRC_DIR)\/%.c$/;"	t
+$(OBJ_DIR)/main.o	Makefile	/^$(OBJ_DIR)\/main.o: main.c$/;"	t
+$(TARGET)	Makefile	/^$(TARGET): $(OBJS)$/;"	t
+BIN_DIR	Makefile	/^BIN_DIR = bin$/;"	m
+BUFFER_READER_H	inc/buffer_reader.h	/^#define BUFFER_READER_H$/;"	d
+BufferReader	inc/buffer_reader.h	/^} BufferReader;$/;"	t	typeref:struct:__anoneb4446f00108
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Iinclude -Iinc -g$/;"	m
+CONTROL_PORT	main.c	/^#define CONTROL_PORT /;"	d	file:
+DISCOVERY_ACK	inc/gige_commands.h	/^    DISCOVERY_ACK = 0x0003,$/;"	e	enum:__anon294bde710103
+DISCOVERY_CMD	inc/gige_commands.h	/^    DISCOVERY_CMD = 0x0002,$/;"	e	enum:__anon294bde710103
+GIGE_COMMANDS_H	inc/gige_commands.h	/^#define GIGE_COMMANDS_H$/;"	d
+GIGE_REGISTER_MEMORY_H	inc/gige_register_memory.h	/^#define GIGE_REGISTER_MEMORY_H$/;"	d
+GIGE_REGISTER_TYPES_H	inc/gige_register_types.h	/^#define GIGE_REGISTER_TYPES_H$/;"	d
+GIGE_SERVER_H	inc/gige_server.h	/^#define GIGE_SERVER_H$/;"	d
+INC_DIR	Makefile	/^INC_DIR = inc$/;"	m
+JSMN_ARRAY	inc/jsmn.h	/^    JSMN_ARRAY = 2,$/;"	e	enum:__anon6a83e2dc0103
+JSMN_ERROR_INVAL	inc/jsmn.h	/^    JSMN_ERROR_INVAL = -2,$/;"	e	enum:__anon6a83e2dc0203
+JSMN_ERROR_NOMEM	inc/jsmn.h	/^    JSMN_ERROR_NOMEM = -1,$/;"	e	enum:__anon6a83e2dc0203
+JSMN_ERROR_PART	inc/jsmn.h	/^    JSMN_ERROR_PART = -3$/;"	e	enum:__anon6a83e2dc0203
+JSMN_OBJECT	inc/jsmn.h	/^    JSMN_OBJECT = 1,$/;"	e	enum:__anon6a83e2dc0103
+JSMN_PRIMITIVE	inc/jsmn.h	/^    JSMN_PRIMITIVE = 0,$/;"	e	enum:__anon6a83e2dc0103
+JSMN_STRING	inc/jsmn.h	/^    JSMN_STRING = 3$/;"	e	enum:__anon6a83e2dc0103
+OBJS	Makefile	/^OBJS = $(patsubst $(SRC_DIR)\/%.c, $(OBJ_DIR)\/%.o, $(SRCS))$/;"	m
+OBJ_DIR	Makefile	/^OBJ_DIR = obj$/;"	m
+PackageCommandType	inc/gige_commands.h	/^} PackageCommandType;$/;"	t	typeref:enum:__anon294bde710103
+READMEM_CMD	inc/gige_commands.h	/^    READMEM_CMD = 0x0084,$/;"	e	enum:__anon294bde710103
+READREG_ACK	inc/gige_commands.h	/^    READREG_ACK   = 0x0081,$/;"	e	enum:__anon294bde710103
+READREG_CMD	inc/gige_commands.h	/^    READREG_CMD = 0x0080,$/;"	e	enum:__anon294bde710103
+REGISTER_ACTION_GROUP_KEY0	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_KEY0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_ACTION_GROUP_KEY1	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_KEY1,$/;"	e	enum:__anon7d9464f80103
+REGISTER_ACTION_GROUP_KEY127	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_KEY127,$/;"	e	enum:__anon7d9464f80103
+REGISTER_ACTION_GROUP_MASK0	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_MASK0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_ACTION_GROUP_MASK1	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_MASK1,$/;"	e	enum:__anon7d9464f80103
+REGISTER_ACTION_GROUP_MASK127	inc/gige_register_types.h	/^    REGISTER_ACTION_GROUP_MASK127$/;"	e	enum:__anon7d9464f80103
+REGISTER_CONTROL_CHANNEL_PRIVILEGE	inc/gige_register_types.h	/^    REGISTER_CONTROL_CHANNEL_PRIVILEGE,$/;"	e	enum:__anon7d9464f80103
+REGISTER_CONTROL_SWITCHOVER_KEY	inc/gige_register_types.h	/^    REGISTER_CONTROL_SWITCHOVER_KEY,$/;"	e	enum:__anon7d9464f80103
+REGISTER_CURRENT_DEFAULT_GATEWAY_0	inc/gige_register_types.h	/^    REGISTER_CURRENT_DEFAULT_GATEWAY_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_CURRENT_IP_ADDRESS_0	inc/gige_register_types.h	/^    REGISTER_CURRENT_IP_ADDRESS_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_CURRENT_IP_CONFIGURATION_0	inc/gige_register_types.h	/^    REGISTER_CURRENT_IP_CONFIGURATION_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_CURRENT_SUBNET_MASK_0	inc/gige_register_types.h	/^    REGISTER_CURRENT_SUBNET_MASK_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_DEVICE_MAC_ADDRESS_HIGH_0	inc/gige_register_types.h	/^    REGISTER_DEVICE_MAC_ADDRESS_HIGH_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_DEVICE_MAC_ADDRESS_LOW_0	inc/gige_register_types.h	/^    REGISTER_DEVICE_MAC_ADDRESS_LOW_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_DEVICE_MODE	inc/gige_register_types.h	/^    REGISTER_DEVICE_MODE,$/;"	e	enum:__anon7d9464f80103
+REGISTER_DEVICE_VERSION	inc/gige_register_types.h	/^    REGISTER_DEVICE_VERSION,$/;"	e	enum:__anon7d9464f80103
+REGISTER_DISCOVERY_ACK_DELAY	inc/gige_register_types.h	/^    REGISTER_DISCOVERY_ACK_DELAY,$/;"	e	enum:__anon7d9464f80103
+REGISTER_GVCP_CONFIGURATION	inc/gige_register_types.h	/^    REGISTER_GVCP_CONFIGURATION,$/;"	e	enum:__anon7d9464f80103
+REGISTER_LINK_SPEED_0	inc/gige_register_types.h	/^    REGISTER_LINK_SPEED_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MANUFACTURER_NAME	inc/gige_register_types.h	/^    REGISTER_MANUFACTURER_NAME,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MANUFACTURER_SPECIFIC_INFORMATION	inc/gige_register_types.h	/^    REGISTER_MANUFACTURER_SPECIFIC_INFORMATION,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MCDA	inc/gige_register_types.h	/^    REGISTER_MCDA,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MCP	inc/gige_register_types.h	/^    REGISTER_MCP,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MCRC	inc/gige_register_types.h	/^    REGISTER_MCRC,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MCSP	inc/gige_register_types.h	/^    REGISTER_MCSP,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MCTT	inc/gige_register_types.h	/^    REGISTER_MCTT,$/;"	e	enum:__anon7d9464f80103
+REGISTER_MODEL_NAME	inc/gige_register_types.h	/^    REGISTER_MODEL_NAME,$/;"	e	enum:__anon7d9464f80103
+REGISTER_NUMBER_OF_MESSAGE_CHANNELS	inc/gige_register_types.h	/^    REGISTER_NUMBER_OF_MESSAGE_CHANNELS,$/;"	e	enum:__anon7d9464f80103
+REGISTER_NUMBER_OF_NETWORK_INTERFACES	inc/gige_register_types.h	/^    REGISTER_NUMBER_OF_NETWORK_INTERFACES,$/;"	e	enum:__anon7d9464f80103
+REGISTER_NUMBER_OF_STREAM_CHANNELS	inc/gige_register_types.h	/^    REGISTER_NUMBER_OF_STREAM_CHANNELS,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PENDING_TIMEOUT	inc/gige_register_types.h	/^    REGISTER_PENDING_TIMEOUT,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PERSISTENT_DEFAULT_GATEWAY_0	inc/gige_register_types.h	/^    REGISTER_PERSISTENT_DEFAULT_GATEWAY_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PERSISTENT_IP_ADDRESS_0	inc/gige_register_types.h	/^    REGISTER_PERSISTENT_IP_ADDRESS_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PERSISTENT_SUBNET_MASK_0	inc/gige_register_types.h	/^    REGISTER_PERSISTENT_SUBNET_MASK_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PRIMARY_APPLICATION_IP_ADDRESS	inc/gige_register_types.h	/^    REGISTER_PRIMARY_APPLICATION_IP_ADDRESS,$/;"	e	enum:__anon7d9464f80103
+REGISTER_PRIMARY_APPLICATION_PORT	inc/gige_register_types.h	/^    REGISTER_PRIMARY_APPLICATION_PORT,$/;"	e	enum:__anon7d9464f80103
+REGISTER_SERIAL_NUMBER	inc/gige_register_types.h	/^    REGISTER_SERIAL_NUMBER,$/;"	e	enum:__anon7d9464f80103
+REGISTER_STREAM_CHANNEL_PACKET_SIZE_0	inc/gige_register_types.h	/^    REGISTER_STREAM_CHANNEL_PACKET_SIZE_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_STREAM_CHANNEL_PORT_0	inc/gige_register_types.h	/^    REGISTER_STREAM_CHANNEL_PORT_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_SUPPORTED_IP_CONFIGURATION_0	inc/gige_register_types.h	/^    REGISTER_SUPPORTED_IP_CONFIGURATION_0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_TIMESTAMP_CONTROL	inc/gige_register_types.h	/^    REGISTER_TIMESTAMP_CONTROL,$/;"	e	enum:__anon7d9464f80103
+REGISTER_TIMESTAMP_TICK_FREQUENCY_HIGH	inc/gige_register_types.h	/^    REGISTER_TIMESTAMP_TICK_FREQUENCY_HIGH,$/;"	e	enum:__anon7d9464f80103
+REGISTER_TIMESTAMP_TICK_FREQUENCY_LOW	inc/gige_register_types.h	/^    REGISTER_TIMESTAMP_TICK_FREQUENCY_LOW,$/;"	e	enum:__anon7d9464f80103
+REGISTER_TIMESTAMP_VALUE_LATCHED_HIGH	inc/gige_register_types.h	/^    REGISTER_TIMESTAMP_VALUE_LATCHED_HIGH,$/;"	e	enum:__anon7d9464f80103
+REGISTER_TIMESTAMP_VALUE_LATCHED_LOW	inc/gige_register_types.h	/^    REGISTER_TIMESTAMP_VALUE_LATCHED_LOW,$/;"	e	enum:__anon7d9464f80103
+REGISTER_UNKNOWN	inc/gige_register_types.h	/^    REGISTER_UNKNOWN = 0,$/;"	e	enum:__anon7d9464f80103
+REGISTER_USER_DEFINED_NAME	inc/gige_register_types.h	/^    REGISTER_USER_DEFINED_NAME,$/;"	e	enum:__anon7d9464f80103
+REGISTER_VERSION	inc/gige_register_types.h	/^    REGISTER_VERSION,$/;"	e	enum:__anon7d9464f80103
+REGISTER_XML_DEVICE_DESCRIPTION_FILE_FIRST_URL	inc/gige_register_types.h	/^    REGISTER_XML_DEVICE_DESCRIPTION_FILE_FIRST_URL,$/;"	e	enum:__anon7d9464f80103
+REGISTER_XML_DEVICE_DESCRIPTION_FILE_SECOND_URL	inc/gige_register_types.h	/^    REGISTER_XML_DEVICE_DESCRIPTION_FILE_SECOND_URL,$/;"	e	enum:__anon7d9464f80103
+RegisterMemory	inc/gige_register_memory.h	/^} RegisterMemory;$/;"	t	typeref:struct:__anonb07d997c0108
+RegisterType	inc/gige_register_types.h	/^} RegisterType;$/;"	t	typeref:enum:__anon7d9464f80103
+SRCS	Makefile	/^SRCS = $(wildcard $(SRC_DIR)\/*.c) main.c  # Include main.c explicitly$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR = src$/;"	m
+TARGET	Makefile	/^TARGET = $(BIN_DIR)\/Starris_Genicam$/;"	m
+UNKNOWN_CMD	inc/gige_commands.h	/^    UNKNOWN_CMD = 0xFFFF$/;"	e	enum:__anon294bde710103
+WRITEREG_CMD	inc/gige_commands.h	/^    WRITEREG_CMD = 0x0082,$/;"	e	enum:__anon294bde710103
+__JSMN_H_	inc/jsmn.h	/^#define __JSMN_H_$/;"	d
+__anon294bde710103	inc/gige_commands.h	/^typedef enum {$/;"	g
+__anon6a83e2dc0103	inc/jsmn.h	/^typedef enum {$/;"	g
+__anon6a83e2dc0203	inc/jsmn.h	/^typedef enum {$/;"	g
+__anon6a83e2dc0308	inc/jsmn.h	/^typedef struct {$/;"	s
+__anon6a83e2dc0408	inc/jsmn.h	/^typedef struct {$/;"	s
+__anon7d9464f80103	inc/gige_register_types.h	/^typedef enum {$/;"	g
+__anonb07d997c0108	inc/gige_register_memory.h	/^typedef struct {$/;"	s
+__anoneb4446f00108	inc/buffer_reader.h	/^typedef struct {$/;"	s
+all	Makefile	/^all: $(TARGET)$/;"	t
+buffer	inc/buffer_reader.h	/^    uint8_t *buffer;$/;"	m	struct:__anoneb4446f00108	typeref:typename:uint8_t *
+clean	Makefile	/^clean:$/;"	t
+create_buffer	src/buffer_reader.c	/^BufferReader *create_buffer(size_t size) {$/;"	f	typeref:typename:BufferReader *
+create_register_memory	src/gige_register_memory.c	/^RegisterMemory *create_register_memory(size_t size) {$/;"	f	typeref:typename:RegisterMemory *
+data	inc/gige_register_memory.h	/^    uint8_t *data; \/\/ Pointer to register memory$/;"	m	struct:__anonb07d997c0108	typeref:typename:uint8_t *
+end	inc/jsmn.h	/^    int end;$/;"	m	struct:__anon6a83e2dc0308	typeref:typename:int
+free_buffer	src/buffer_reader.c	/^void free_buffer(BufferReader *buf) {$/;"	f	typeref:typename:void
+free_register_memory	src/gige_register_memory.c	/^void free_register_memory(RegisterMemory *memory) {$/;"	f	typeref:typename:void
+handle_message	src/gige_server.c	/^void handle_message(BufferReader *msg, struct sockaddr_in *client, int sock, RegisterMemory *reg/;"	f	typeref:typename:void
+index	inc/buffer_reader.h	/^    size_t index;$/;"	m	struct:__anoneb4446f00108	typeref:typename:size_t
+init_register_memory	src/gige_register_memory.c	/^void init_register_memory(RegisterMemory *reg, size_t size) {$/;"	f	typeref:typename:void
+jsmn_alloc_token	src/jsmn.c	/^static jsmntok_t *jsmn_alloc_token(jsmn_parser *parser,$/;"	f	typeref:typename:jsmntok_t *	file:
+jsmn_fill_token	src/jsmn.c	/^static void jsmn_fill_token(jsmntok_t *token, jsmntype_t type,$/;"	f	typeref:typename:void	file:
+jsmn_init	src/jsmn.c	/^void jsmn_init(jsmn_parser *parser, void* reserved) {$/;"	f	typeref:typename:void
+jsmn_parse	src/jsmn.c	/^jsmnerr_t jsmn_parse(jsmn_parser *parser, const char *js, size_t len,$/;"	f	typeref:typename:jsmnerr_t
+jsmn_parse_primitive	src/jsmn.c	/^static jsmnerr_t jsmn_parse_primitive(jsmn_parser *parser, const char *js,$/;"	f	typeref:typename:jsmnerr_t	file:
+jsmn_parse_string	src/jsmn.c	/^static jsmnerr_t jsmn_parse_string(jsmn_parser *parser, const char *js,$/;"	f	typeref:typename:jsmnerr_t	file:
+jsmn_parser	inc/jsmn.h	/^} jsmn_parser;$/;"	t	typeref:struct:__anon6a83e2dc0408
+jsmnerr_t	inc/jsmn.h	/^} jsmnerr_t;$/;"	t	typeref:enum:__anon6a83e2dc0203
+jsmntok_t	inc/jsmn.h	/^} jsmntok_t;$/;"	t	typeref:struct:__anon6a83e2dc0308
+jsmntype_t	inc/jsmn.h	/^} jsmntype_t;$/;"	t	typeref:enum:__anon6a83e2dc0103
+json_get_value	src/gige_register_memory.c	/^static const char *json_get_value(const char *json, jsmntok_t *tokens, int count, const char *ke/;"	f	typeref:typename:const char *	file:
+main	main.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+parent	inc/jsmn.h	/^    int parent;$/;"	m	struct:__anon6a83e2dc0308	typeref:typename:int
+parse_memory_json	src/gige_register_memory.c	/^int parse_memory_json(const char *filename, RegisterMemory *memory) {$/;"	f	typeref:typename:int
+pos	inc/jsmn.h	/^    unsigned int pos; \/* offset in the JSON string *\/$/;"	m	struct:__anon6a83e2dc0408	typeref:typename:unsigned int
+read_bit	src/gige_register_memory.c	/^bool read_bit(RegisterMemory *memory, uint32_t address, int index) {$/;"	f	typeref:typename:bool
+read_int	src/gige_register_memory.c	/^int read_int(RegisterMemory *memory, uint32_t address) {$/;"	f	typeref:typename:int
+read_string	src/gige_register_memory.c	/^char *read_string(RegisterMemory *memory, uint32_t address, size_t length) {$/;"	f	typeref:typename:char *
+read_word_be	src/buffer_reader.c	/^uint32_t read_word_be(BufferReader *buf) {$/;"	f	typeref:typename:uint32_t
+size	inc/buffer_reader.h	/^    size_t size;$/;"	m	struct:__anoneb4446f00108	typeref:typename:size_t
+size	inc/gige_register_memory.h	/^    size_t size;   \/\/ Size of the memory in bytes$/;"	m	struct:__anonb07d997c0108	typeref:typename:size_t
+size	inc/jsmn.h	/^    int size;$/;"	m	struct:__anon6a83e2dc0308	typeref:typename:int
+size	inc/jsmn.h	/^    unsigned size;$/;"	m	struct:__anon6a83e2dc0408	typeref:typename:unsigned
+start	inc/jsmn.h	/^    int start;$/;"	m	struct:__anon6a83e2dc0308	typeref:typename:int
+toknext	inc/jsmn.h	/^    unsigned int toknext; \/* next token to allocate *\/$/;"	m	struct:__anon6a83e2dc0408	typeref:typename:unsigned int
+toksuper	inc/jsmn.h	/^    int toksuper; \/* superior token node, e.g parent object or array *\/$/;"	m	struct:__anon6a83e2dc0408	typeref:typename:int
+type	inc/jsmn.h	/^    jsmntype_t type;$/;"	m	struct:__anon6a83e2dc0308	typeref:typename:jsmntype_t
+write_bit	src/gige_register_memory.c	/^void write_bit(RegisterMemory *memory, uint32_t address, int index, bool value) {$/;"	f	typeref:typename:void
+write_int	src/gige_register_memory.c	/^void write_int(RegisterMemory *memory, uint32_t address, int value) {$/;"	f	typeref:typename:void
+write_string	src/gige_register_memory.c	/^void write_string(RegisterMemory *memory, uint32_t address, const char *value, size_t length) {$/;"	f	typeref:typename:void
+write_word_be	src/buffer_reader.c	/^void write_word_be(BufferReader *buf, uint32_t value) {$/;"	f	typeref:typename:void

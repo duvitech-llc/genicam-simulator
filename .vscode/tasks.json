@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make", // Use the 'make' command
+            "args": ["all"], // Target to build (e.g., 'all')
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"], // Use GCC problem matcher for error highlighting
+            "detail": "Build the project using Makefile"
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": ["clean"], // Target to clean (e.g., 'clean')
+            "problemMatcher": [],
+            "detail": "Clean the project using Makefile"
+        }
+    ]
+}
