@@ -5,7 +5,7 @@
             "name": "(gdb) Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/Starris_Genicam", // Path to the executable
+            "program": "${workspaceFolder}/bin/Genicam_Simulator", // Path to the executable
             "args": [], // Command-line arguments
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}", // Working directory

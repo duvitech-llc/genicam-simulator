@@ -60,11 +60,11 @@ void camera_device_init(CameraDevice *device, const char *genicam_filename)
 	// Current IP
 	camera_write_memory(device, SC_GVBS_CURRENT_IP_ADDRESS_OFFSET, sizeof(global_network_config.ip_address), (uint8_t *)&global_network_config.ip_address);
 
-	strcpy(((char *)device->memory) + SC_GVBS_MANUFACTURER_NAME_OFFSET, STARRIS_CAMERA_MANUFACTURER_NAME);
-	strcpy(((char *)device->memory) + SC_GVBS_MODEL_NAME_OFFSET, STARRIS_CAMERA_MANUFACTURER_MODEL);
-	strcpy(((char *)device->memory) + SC_GVBS_MANUFACTURER_INFO_OFFSET, STARRIS_CAMERA_MANUFACTURER_INFO);
-	strcpy(((char *)device->memory) + SC_GVBS_DEVICE_VERSION_OFFSET, STARRIS_CAMERA_VERSION);
-	strcpy(((char *)device->memory) + SC_GVBS_SERIAL_NUMBER_OFFSET, STARRIS_CAMERA_SERIALNUM);
+	strcpy(((char *)device->memory) + SC_GVBS_MANUFACTURER_NAME_OFFSET, GENICAM_CAMERA_MANUFACTURER_NAME);
+	strcpy(((char *)device->memory) + SC_GVBS_MODEL_NAME_OFFSET, GENICAM_CAMERA_MANUFACTURER_MODEL);
+	strcpy(((char *)device->memory) + SC_GVBS_MANUFACTURER_INFO_OFFSET, GENICAM_CAMERA_MANUFACTURER_INFO);
+	strcpy(((char *)device->memory) + SC_GVBS_DEVICE_VERSION_OFFSET, GENICAM_CAMERA_VERSION);
+	strcpy(((char *)device->memory) + SC_GVBS_SERIAL_NUMBER_OFFSET, GENICAM_CAMERA_SERIALNUM);
 
 	strcpy(((char *)device->memory) + SC_GVBS_XML_URL_0_OFFSET, device->genicam_xml_url);
 

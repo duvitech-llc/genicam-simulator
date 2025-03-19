@@ -1,1 +1,1 @@
-# Starris GigE Camera Simulator
+# GigE Camera Simulator
