@@ -17,30 +17,40 @@ void camera_device_init(CameraDevice *device, const char *genicam_filename)
 	memset(device->genicam_xml_url, 0, sizeof(device->genicam_xml_url));
 
 	// get genicam file
-	if (genicam_filename != NULL)
+	if (genicam_filename != NULL) {
 		memcpy(device->genicam_filename, genicam_filename, strlen(genicam_filename));
 
-	if (strlen(device->genicam_filename) >0)
-	{
-		device->genicam_xml = g_file_get_contents(device->genicam_filename, &device->genicam_xml_size);
-		if (device->genicam_xml != NULL)
+		if (strlen(device->genicam_filename) >0)
 		{
+			device->genicam_xml = g_file_get_contents(device->genicam_filename, &device->genicam_xml_size);
+			if (device->genicam_xml != NULL)
+			{
 
-			printf("Read XML Camera Definition: %s Length: %ld\r\n", device->genicam_filename, device->genicam_xml_size);
+				printf("Read XML Camera Definition: %s Length: %ld\r\n", device->genicam_filename, device->genicam_xml_size);
 
-			// Generate the GenICam XML URL
-			snprintf(device->genicam_xml_url, sizeof(device->genicam_xml_url),
-					 "Local:///camera.xml;%x;%x",
-					 SC_CAMERA_MEMORY_SIZE,
-					 (unsigned int)device->genicam_xml_size);
+				// Generate the GenICam XML URL
+				snprintf(device->genicam_xml_url, sizeof(device->genicam_xml_url),
+						"Local:///camera.xml;%x;%x",
+						SC_CAMERA_MEMORY_SIZE,
+						(unsigned int)device->genicam_xml_size);
+			}
+			else
+			{
+				printf("Failed to Read XML Camera Definition\r\n");
+				device->genicam_xml_size = 0;
+			}
 		}
-		else
-		{
-			printf("Failed to Read XML Camera Definition\r\n");
-			device->genicam_xml_size = 0;
-		}
+	} else {
+        printf("No Genicam file specified using embedded\r\n");
+        memcpy(device->genicam_filename, "camera.xml", strlen("camera.xml"));
+        device->genicam_xml      = (char*) genicam_xml_default_content;
+        device->genicam_xml_size = strlen(genicam_xml_default_content);
+        snprintf(device->genicam_xml_url, sizeof(device->genicam_xml_url),
+                 "Local:///camera.xml;%x;%x",
+                 SC_CAMERA_MEMORY_SIZE,
+                 (unsigned int) device->genicam_xml_size);
 	}
-
+	
 	//// MAC address
 	// for (int i = 0; i < 6; i++) {
 	//     write_byte(response, global_network_config.mac_address[i]);

@@ -10,11 +10,14 @@
 
 #define CONTROL_PORT 3956 // GigE Vision control protocol port
 
-int main() {
+int main(int argc, char *argv[]) {
     int sock;
     struct sockaddr_in server_addr, client_addr;
     socklen_t client_len = sizeof(client_addr);
     uint8_t buffer[1024];
+
+    // Determine camera.xml path
+    const char *camera_xml_path = (argc > 1) ? argv[1] : NULL;
 
     // Initialize socket
     if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
@@ -39,9 +42,10 @@ int main() {
 
     // Initialize registers
     CameraDevice sc_device;
-    camera_device_init(&sc_device, "camera.xml");
+    camera_device_init(&sc_device, camera_xml_path);
 
     printf("Server running on port %d\n", CONTROL_PORT);
+
     while (1) {
         ssize_t len = recvfrom(sock, buffer, sizeof(buffer), 0, (struct sockaddr *)&client_addr, &client_len);
         if (len < 0) {
